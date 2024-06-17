@@ -2,6 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "elnath";
+  src: url("../public/fonts/elnath/ELNATH.otf");
+}
+
+@font-face {
+  font-family: "NeonSans";
+  src: url("../public/fonts/neon_sans/NeonSans.ttf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  background-size: cover;
+
+  color: hsl(0, 0%, 90%);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#main {
+  background: url("../public/bg-space-m.png") repeat center/cover;
+}
+
+a {
+  @apply text-blue-500 underline underline-offset-2 transition-colors duration-200 hover:text-blue-700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "elnath";
+  margin-bottom: 1rem;
+  line-height: 1.15;
+  letter-spacing: -0.022em;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  @apply text-h1 md:text-mh1 lg:text-xh1;
+}
+
+h2 {
+  @apply text-h2 md:text-mh2 lg:text-xh2;
+}
+
+h3 {
+  @apply text-h3 md:text-mh3 lg:text-xh3;
+}
+
+h4 {
+  @apply text-h4 md:text-mh4 lg:text-xh4;
+}
+
+h5 {
+  @apply text-h5 md:text-mh5 lg:text-xh5;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,12 +100,78 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+
+.line {
+  fill: none;
+  transition:
+    stroke-dasharray 400ms,
+    stroke-dashoffset 400ms;
+  stroke: #fff;
+  stroke-width: 5.5;
+  stroke-linecap: square;
+}
+
+.ham4 .top {
+  stroke-dasharray: 40 121;
+}
+
+.ham4 .bottom {
+  stroke-dasharray: 40 121;
+}
+
+.ham4.active .top {
+  stroke-dashoffset: -68px;
+}
+
+.ham4.active .bottom {
+  stroke-dashoffset: -68px;
+}
+
+.bg {
+  filter: blur(20px);
+  background-color: hsl(0, 0%, 10%);
+  background-size: cover;
+  object-fit: cover;
+  height: 100%;
+  z-index: -20;
+}
+
+.bg-overlay:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.5);
+  z-index: -20;
+}
+
+.list-style-star {
+  list-style-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 200 200' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_119_243)'%3E%3Cpath d='M99.995 200V143.969L0 99.995H56.0313L99.995 0V56.0313L200 99.995H143.969L99.995 200Z' fill='url(%23paint0_linear_119_243)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_119_243' x1='177' y1='-9.23648e-06' x2='39.5' y2='152.5' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23B0B9FF'/%3E%3Cstop offset='1' stop-color='%23E7E9FF'/%3E%3C/linearGradient%3E%3CclipPath id='clip0_119_243'%3E%3Crect width='200' height='200' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+}
+
+textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  width: 100%;
 }
