@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "./globals.scss";
 import Header from "@/components/layout/Header";
 import { jetbrainsMono } from "./fonts";
 import SmoothScrolling from "@/utils/SmoothScrolling";
-import { AnimatePresence } from "framer-motion";
 import AnimatePresenceRoot from "@/components/animations/AnimatePresenceRoot";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 

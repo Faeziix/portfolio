@@ -36,6 +36,7 @@ function AboutMe() {
                 src={ProfessionalPortrait}
                 alt="Professional Portrait"
                 className="w-full rounded-full"
+                placeholder="blur"
               />
             </div>
           </div>
