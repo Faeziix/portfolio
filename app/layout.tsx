@@ -5,6 +5,7 @@ import { jetbrainsMono } from "./fonts";
 import SmoothScrolling from "@/utils/SmoothScrolling";
 import { AnimatePresence } from "framer-motion";
 import AnimatePresenceRoot from "@/components/animations/AnimatePresenceRoot";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,10 +22,9 @@ export default function RootLayout({
       <body className={`${jetbrainsMono.className} `}>
         <Header />
         <SmoothScrolling>
-          <AnimatePresenceRoot>
-            {children}
-          </AnimatePresenceRoot>
+          <AnimatePresenceRoot>{children}</AnimatePresenceRoot>
         </SmoothScrolling>
+        <SpeedInsights />
       </body>
     </html>
   );
