@@ -31,12 +31,14 @@ function Header() {
   }, []);
 
   return (
-    <div className={`nav fixed flex justify-center z-30 w-full`}>
-      <div className={ `${transparentBg ? "bg-transparent" : "bg-white/5"} z-30 md:hidden backdrop-blur-lg w-full flex items-center justify-end transition-colors md:justify-center` }>
+    <div className={`nav fixed z-30 flex w-full justify-center`}>
+      <div
+        className={`${transparentBg ? "bg-transparent" : "bg-white/10"} flex w-full items-center justify-end backdrop-blur-lg transition-colors md:hidden md:justify-center`}
+      >
         <HamburgerIcon active={hamActive} setActive={setHamActive} />
       </div>
       <div
-        className={`${elnath.className} ${transparentBg ? "bg-transparent" : "bg-white/5"} my-4 hidden md:flex gap-4 rounded-full p-6 text-lg backdrop-blur-lg transition-colors`}
+        className={`${elnath.className} ${transparentBg ? "bg-transparent" : "bg-white/10"} my-4 hidden gap-4 rounded-full p-6 text-lg shadow-lg backdrop-blur-xl transition-colors md:flex`}
       >
         {links.map((link, index) => (
           <Link
@@ -57,33 +59,32 @@ function Header() {
             animate={{ opacity: 1, display: "block" }}
             exit={{ opacity: 0 }}
             transition={{
-              duration: 0.2,
+              duration: 0.1,
               easings: "easeOut",
             }}
           >
-            <div className="fixed top-2 right-2">
-
-              <HamburgerIcon
-                active={hamActive} setActive={setHamActive} />
+            <div className="fixed right-2 top-2">
+              <HamburgerIcon active={hamActive} setActive={setHamActive} />
             </div>
 
             <div className="flex h-full grow items-center justify-end">
               <div className="flex h-full w-full flex-col items-center justify-center gap-14 text-5xl text-cyan-300 text-opacity-70">
                 {links.map((link, index) => (
-                  <motion.p
-                    className={elnath.className}
-                    key={index}
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 50 }}
-                    transition={{
-                      duration: 0.4,
-                      easings: "easeInOut",
-                      delay: index * 0.1,
-                    }}
-                  >
-                    {link.title}
-                  </motion.p>
+                  <Link key={index} className="text-inherit no-underline" href={link.url}>
+                    <motion.p
+                      className={elnath.className}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 20 }}
+                      transition={{
+                        duration: 0.3,
+                        easings: "easeInOut",
+                        delay: index * 0.1,
+                      }}
+                    >
+                      {link.title}
+                    </motion.p>
+                  </Link>
                 ))}
               </div>
             </div>

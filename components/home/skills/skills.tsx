@@ -151,7 +151,7 @@ export const Skills = (props: {}) => {
         </h2>
         <div className="z-20 mx-auto mt-24 flex max-w-7xl flex-col flex-wrap items-stretch justify-evenly gap-xl text-center lg:flex-nowrap">
           {skillsList.map((skill, index) => (
-            <div className="flex md:flex-row flex-col w-full gap-xl justify-between" key={index}>
+            <div className="flex md:flex-row flex-col w-full md:gap-xl gap-md justify-between" key={index}>
               <h3 className="md:w-40 text-xl text-left">{skill.category}</h3>
               <div className="md:grid flex flex-wrap lg:grid-cols-6 md:grid-cols-4 gap-sm">
                 {skill.items.map((item, index) => (

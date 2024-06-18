@@ -25,13 +25,13 @@ function Hero() {
         <Image
           alt="galaxy"
           src={Galaxy}
-          className="bg select-none object-fit h-[100vh] absolute left-0 top-0 w-full"
+          className="bg object-fit absolute left-0 top-0 h-[96vh] w-full select-none"
         />
       </div>
-      <div className="flex h-full w-full max-w-7xl flex-col items-center md:items-start justify-center text-left">
-        <h1 className="relative -left-1 -mb-md text-left text-7xl font-bold">
+      <div className="flex h-full w-full max-w-7xl flex-col items-center justify-center text-left md:items-start">
+        <h1 className="relative -left-1 -mb-md text-center text-7xl font-bold md:text-left">
           <span className={`${styles.neon} ${styles.primary_gradient}`}>
-            FAEZ {" "}
+            FAEZ{" "}
           </span>
           <span className={`${styles.neon} ${styles.primary_gradient}`}>
             ANSARI
@@ -47,7 +47,7 @@ function Hero() {
           {icons.map((icon) => (
             <div
               key={icon.name}
-              className={`${styles.social_media} h-16 aspect-square flex items-center justify-center border-2 border-solid border-cyan-100 border-opacity-50`}
+              className={`${styles.social_media} flex aspect-square h-16 items-center justify-center border-2 border-solid border-cyan-100 border-opacity-50`}
             >
               <span className="text-5xl">{icon.icon}</span>
             </div>
