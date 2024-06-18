@@ -15,22 +15,19 @@ function AboutMe() {
             className={`${styles.body} order-last w-full max-w-prose space-y-4 leading-8 text-stone-300 lg:order-first lg:w-1/2`}
           >
             <p>
-              Hey, I'm Faez, a Frontend web developer passionate about{" "}
-              <b>speed</b> and <b>efficiency</b>.{" "}
+              I’m Faez, a Fullstack developer dedicated to building{" "}
+              <b>modern</b> and <b>efficient</b> web applications. I am
+              dedicated to maximizing <b>productivity</b> by practicing my skills
+              and utilizing new tools every day.
             </p>
             <p>
-              From day one, I've focused on creating <b>user-friendly</b> web
-              applications, constantly seeking efficient tools and technologies
-              in my workflow to improve my <b>productivity</b>.{" "}
+              I love working in <b>collaborative</b> environments and am always
+              eager to work with talented teams to improve my skills and
+              contribute effectively.
             </p>
             <p>
-              I am best in a team environment especially if I am working with
-              people who are better than me. That motivates me to improve myself{" "}
-              <b>continuously</b>.
-            </p>
-            <p>
-              If you are looking for someone like me, please don't hesitate to {" "}
-              <Link href="#contact"> contact me</Link>.
+              If you’re looking for a developer who values quality and
+              efficiency, feel free to <Link href="#contact">contact me</Link>.
             </p>
           </section>
           <div className="flex justify-center">

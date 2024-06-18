@@ -11,7 +11,6 @@ const projects = {
 
 function Projects() {
   const params = useParams<{ id: keyof typeof projects }>();
-  console.log(params);
 
   return <div>{projects[params.id].page}</div>;
 }

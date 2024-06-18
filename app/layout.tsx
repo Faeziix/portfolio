@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import { jetbrainsMono } from "./fonts";
-
-const inter = Inter({ subsets: ["latin"] });
+import SmoothScrolling from "@/utils/SmoothScrolling";
+import { AnimatePresence } from "framer-motion";
+import AnimatePresenceRoot from "@/components/animations/AnimatePresenceRoot";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,9 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${jetbrainsMono.className}`}>
+      <body className={`${jetbrainsMono.className} `}>
         <Header />
-        {children}
+        <SmoothScrolling>
+          <AnimatePresenceRoot>
+            {children}
+          </AnimatePresenceRoot>
+        </SmoothScrolling>
       </body>
     </html>
   );

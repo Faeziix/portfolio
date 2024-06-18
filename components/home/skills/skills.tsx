@@ -77,12 +77,12 @@ const frameworks = [
 ];
 
 const tools = [
-  { name: "Tmux", icon: <SiTmux /> },
-  { name: "Artix", icon: <SiArtixlinux /> },
   {
     name: "Nvim",
     icon: <SiNeovim />,
   },
+  { name: "Tmux", icon: <SiTmux /> },
+  { name: "Artix Linux", icon: <SiArtixlinux /> },
   {
     name: "Hyprland",
     icon: <Image className="w-[44px]" src={Hyprland} alt="Hyprland" />,

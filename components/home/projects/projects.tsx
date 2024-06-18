@@ -1,4 +1,4 @@
-import TypegridPic from "@/public/projects/udja/typegrid.png";
+import UDJA from "@/public/projects/udja/udja.png";
 import DentalPic from "@/public/projects/dental/dental-clinic.png";
 import CSJWikiPic from "@/public/projects/csj-wiki/csj-wiki.png";
 import ProjectSection from "./ProjectSection";
@@ -40,7 +40,7 @@ const projects = [
         </ul>
       </div>
     ),
-    imgSrc: TypegridPic,
+    imgSrc: UDJA,
     link: "https://udja.app/",
     pageLink: "/projects/udja",
   },

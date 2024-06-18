@@ -26,19 +26,23 @@ function ProjectSection({ project, direction }: ProjectSectionProps) {
   const { name, imgSrc, link, description, pageLink } = project;
   return (
     <div key={name} className="p-2">
-      <div className={`h-full grid grid-cols-2 rounded-lg p-4 gap-10`}>
+      <div
+        className={`grid h-full grid-cols-1 gap-md rounded-lg p-4 md:grid-cols-2 md:gap-lg`}
+      >
         <div
-          className={
-            direction === Direction.Left ? "order-first" : "order-last"
-          }
+          className={`${
+            direction === Direction.Left ? "md:order-first" : "md:order-last"
+          } order-last`}
         >
-          <h2 className="text-xl mb-md text-left flex gap-1">
-            {name}
-            <Link href={link} className="text-blue-400">
+          <Link href={link} className="text-inherit">
+            <h2 className="mb-md flex w-fit gap-1 text-left text-xl">
+              {name}
               <RxExternalLink />
-            </Link>
-          </h2>
-          <p className="text-stone-300 text-lg leading-8 text-left">{description}</p>
+            </h2>
+          </Link>
+          <p className="text-left text-lg leading-8 text-stone-300">
+            {description}
+          </p>
         </div>
         <div>
           <Link
@@ -48,9 +52,10 @@ function ProjectSection({ project, direction }: ProjectSectionProps) {
             <Image
               src={imgSrc}
               alt={name}
-              className="w-full mb-4 rounded-md border-2 border-cyan-300 hover:border-blue-400"
+              className="mb-4 w-full rounded-md border-2 border-cyan-300 hover:border-blue-400"
               width={800}
               height={400}
+              placeholder="blur"
             />
           </Link>
         </div>

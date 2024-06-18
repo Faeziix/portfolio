@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 @font-face {
   font-family: "elnath";
   src: url("../public/fonts/elnath/ELNATH.otf");
@@ -24,10 +45,6 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-#main {
-  background: url("../public/bg-space-m.png") repeat center/cover;
 }
 
 a {
@@ -149,7 +166,6 @@ h5 {
   background-color: hsl(0, 0%, 10%);
   background-size: cover;
   object-fit: cover;
-  height: 100%;
   z-index: -20;
 }
 
@@ -174,4 +190,21 @@ textarea {
   box-sizing: border-box;
 
   width: 100%;
+}
+
+.inner {
+  background-color: black;
+  .page {
+    background-color: white;
+  }
+
+  .slide {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+  }
 }
