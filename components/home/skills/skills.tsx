@@ -40,10 +40,6 @@ const frameworks = [
     icon: <SiReactquery />,
   },
   {
-    name: "SCSS",
-    icon: <SiSass />,
-  },
-  {
     name: "Tailwind CSS",
     icon: <SiTailwindcss />,
   },
@@ -131,7 +127,7 @@ const skillsList = [
     categoryStyle: { gridTemplateColumns: "repeat(3, auto)" },
   },
   {
-    category: "Frameworks",
+    category: "Frameworks & Libraries",
     items: frameworks,
     categoryStyle: { gridTemplateColumns: "repeat(auto-fit,112px)" },
   },
