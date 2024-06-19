@@ -11,66 +11,52 @@ enum Direction {
 const projects = [
   {
     name: "Udja",
-    tags: [
-      "Nextjs",
-      "TypeScript",
-      "Tailwind CSS",
-      "Antd",
-      "Framer Motion",
-      "Strapi",
-      "Django",
-      "Django Rest Framework",
+    description:
+      "An educational platform for learning and practicing Jungian Analytical Psychology.",
+    deliverables: [
+      "Migration of the existing membership platform to Next.js and Strapi CMS resulting in 90% cost reduction",
+      "Integration of the Stripe payment gateway",
+      "Migration from existing react app to Next.js in span of 10 days",
+      "Designing and implementing the UI/UX",
+      "Developing tools and games for learning and practicing Jungian Analytical Psychology",
+      "Markdown support",
     ],
-    description: (
-      <div>
-        <p className="mb-md">
-          A educational platform for learning and practicing Jungian Analytical
-          Psychology.
-        </p>
-        <h3 className="text-lg text-left mb-0">Features:</h3>
-
-        <ul className="list-inside list-style-star list-disc ">
-          <li>Membership platform</li>
-          <li>Typegrid: A personality assessment tool</li>
-          <li>Personality test</li>
-          <li>Puzzles for practicing typing skills using Typegrid</li>
-          <li>
-            Journal for users to keep track of thier typings and their notes
-          </li>
-        </ul>
-      </div>
-    ),
     imgSrc: UDJA,
     link: "https://udja.app/",
     pageLink: "/projects/udja",
   },
   {
-    name: "Dental Clinic",
-    tags: ["Nextjs", "Framer Motion", "Tailwind CSS"],
-    description:
-      "This project is a bi-lingual dental clinic website, created with colaboration with designer friend of mine. The focus of this project is to create a website that is user friendly and responsive with a modern design and animations.",
-    imgSrc: DentalPic,
-    link: "https://dental-clinic-faeziix.vercel.app/",
-    pageLink: "/projects/dental",
-  },
-  {
     name: "CSJ Wiki",
     description:
-      "This is a wiki for all the knowledge about Jungian Analytical Psychology and Typegrid. It has search functionality and users can navigate through the wiki using the sidebar.",
-    tags: ["Nextjs", "Tailwind CSS"],
+      "A wiki for the Jungian Analytical Psychology and the CS Joseph's content.",
+    deliverables: ["Search functionality", "File explorer", "Markdown support"],
     imgSrc: CSJWikiPic,
     link: "https://wiki.csjoseph.life/",
     pageLink: "/projects/csj-wiki",
+  },
+  {
+    name: "Dental Clinic",
+    description:
+      "A bilingual dental clinic website written in Nextjs with a custom language switcher and animations.",
+    deliverables: [
+      "Effective User Flow and UI/UX",
+      "Responsive design",
+      "Custom animations",
+      "Custom language switcher",
+    ],
+    imgSrc: DentalPic,
+    link: "https://dental-clinic-faeziix.vercel.app/",
+    pageLink: "/projects/dental",
   },
 ];
 
 function HomeProjects() {
   return (
-    <div className="max-w-7xl mx-auto ">
-      <h2 id="projects" className="mb-20 text-center scroll-mt-24">
+    <div className="mx-auto max-w-7xl">
+      <h2 id="projects" className="mb-20 scroll-mt-24 text-center">
         Projects
       </h2>
-      <div className="flex flex-col justify-center w-full gap-8">
+      <div className="flex w-full flex-col justify-center gap-8">
         {projects.map((project, i) => (
           <ProjectSection
             key={project.name}

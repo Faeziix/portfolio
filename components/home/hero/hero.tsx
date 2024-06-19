@@ -43,16 +43,6 @@ function Hero() {
         >
           FullStack Developer
         </h2>
-        <div className="flex gap-3 opacity-90">
-          {icons.map((icon) => (
-            <div
-              key={icon.name}
-              className={`${styles.social_media} flex aspect-square h-16 items-center justify-center border-2 border-solid border-cyan-100 border-opacity-50`}
-            >
-              <span className="text-5xl">{icon.icon}</span>
-            </div>
-          ))}
-        </div>
       </div>
     </div>
   );

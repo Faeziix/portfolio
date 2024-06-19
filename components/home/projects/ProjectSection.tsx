@@ -10,6 +10,8 @@ type Project = {
   imgSrc: StaticImageData;
   link: string;
   pageLink: string;
+  deliverables: string[];
+  readMore?: boolean;
 };
 
 enum Direction {
@@ -23,7 +25,8 @@ type ProjectSectionProps = {
 };
 
 function ProjectSection({ project, direction }: ProjectSectionProps) {
-  const { name, imgSrc, link, description, pageLink } = project;
+  const { name, imgSrc, link, description, pageLink, deliverables, readMore } =
+    project;
   return (
     <div key={name} className="p-2">
       <div
@@ -40,25 +43,32 @@ function ProjectSection({ project, direction }: ProjectSectionProps) {
               <RxExternalLink />
             </h2>
           </Link>
-          <p className="text-left text-lg leading-8 text-stone-300">
-            {description}
-          </p>
+          <div className="">
+            <p className="text-left leading-8 text-lg text-stone-300">{description}</p>
+            <h3 className="mb-xs text-left text-base">My deliverables:</h3>
+            <ul className="list-style-star space-y-2 list-inside list-disc">
+              {deliverables.map((feature) => (
+                <li key={feature}>{feature}</li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div>
-          <Link
-            href={pageLink}
-            className="flex flex-col gap-2 hover:text-blue-400"
-          >
-            <Image
-              src={imgSrc}
-              alt={name}
-              className="mb-4 w-full rounded-md border-2 border-cyan-300 hover:border-blue-400"
-              width={800}
-              height={400}
-              placeholder="blur"
-            />
-          </Link>
+          <Image
+            src={imgSrc}
+            alt={name}
+            className="mb-4 w-full rounded-md border-2 border-cyan-300"
+            width={800}
+            height={400}
+            placeholder="blur"
+          />
         </div>
+
+        {readMore && (
+          <Link href={pageLink}>
+            <h3 className="text-left text-sm">Read more</h3>
+          </Link>
+        )}
       </div>
     </div>
   );

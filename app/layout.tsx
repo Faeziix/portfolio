@@ -3,8 +3,8 @@ import "./globals.scss";
 import Header from "@/components/layout/Header";
 import { jetbrainsMono } from "./fonts";
 import SmoothScrolling from "@/utils/SmoothScrolling";
-import AnimatePresenceRoot from "@/components/animations/AnimatePresenceRoot";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,10 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${jetbrainsMono.className} `}>
         <Header />
-        <SmoothScrolling>
-          <AnimatePresenceRoot>{children}</AnimatePresenceRoot>
-        </SmoothScrolling>
+        <SmoothScrolling>{children}</SmoothScrolling>
         <SpeedInsights />
+        <Footer />
       </body>
     </html>
   );

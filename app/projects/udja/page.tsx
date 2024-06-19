@@ -3,11 +3,13 @@ import TypegridImage from "@/public/typegrid.png";
 
 function Udja() {
   return (
-    <section>
-      <h1>
-        UDJA
-      </h1>
-    </section>
+    <article>
+        <h1>
+          UDJA
+        </h1>
+      <section>
+      </section>
+    </article>
   );
 }
 
