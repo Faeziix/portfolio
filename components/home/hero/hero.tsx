@@ -30,8 +30,8 @@ function Hero() {
           className="bg object-fit absolute left-0 top-0 h-[96vh] w-full select-none"
         />
       </div>
-      <div className="flex xs:px-10 h-full w-full max-w-7xl flex-col items-center justify-center text-left md:items-start">
-        <h1 className="relative md:-left-1 -mb-md text-center font-bold md:text-left">
+      <div className="xs:px-10 flex h-full w-full max-w-7xl flex-col md:px-10 items-center justify-center text-left md:items-start">
+        <h1 className="relative -mb-md text-center lg:text-7xl font-bold md:-left-1 md:text-left">
           <span className={`${styles.neon} ${styles.primary_gradient}`}>
             FAEZ{" "}
           </span>
@@ -41,12 +41,12 @@ function Hero() {
         </h1>
         <h2
           id="title"
-          className="relative mt-5 text-left md:text-2xl text-lg font-bold text-cyan-100 text-opacity-70"
+          className="relative mt-5 text-left text-lg font-bold text-cyan-100 text-opacity-70 md:text-2xl"
         >
           FullStack Developer
         </h2>
         <Link href="#contact">
-          <Button className="bg-cyan-800/50 border-2 border-cyan-500/50 text-white backdrop-blur-md">
+          <Button className="border-2 border-cyan-500/50 bg-cyan-800/50 text-white backdrop-blur-md">
             GET IN TOUCH
           </Button>
         </Link>
