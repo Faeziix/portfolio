@@ -12,7 +12,7 @@ function AboutMe() {
         </h2>
         <div className="flex flex-col items-center justify-between gap-xl lg:flex-row">
           <section
-            className={`${styles.body} order-last w-full max-w-prose space-y-4 leading-8 text-stone-300 lg:order-first lg:w-1/2`}
+            className={`${styles.body} order-last w-full max-w-prose space-y-4 leading-8 text-stone-300 lg:w-1/2`}
           >
             <p>
               I’m Faez, a Fullstack developer dedicated to building{" "}

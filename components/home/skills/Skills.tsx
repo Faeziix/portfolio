@@ -152,7 +152,7 @@ export const Skills = (props: {}) => {
               <div className="md:grid flex flex-wrap justify-center lg:grid-cols-6 md:grid-cols-4 gap-sm">
                 {skill.items.map((item, index) => (
                   <div
-                    className="flex aspect-square w-28 flex-col items-center justify-center gap-1 rounded-lg border-2 border-solid border-cyan-200 bg-slate-950 p-3 text-5xl"
+                    className="flex aspect-square sm:w-28 w-24 flex-col items-center justify-center gap-1 rounded-lg border-2 border-solid border-cyan-200 bg-slate-950 p-3 text-5xl"
                     key={index}
                   >
                     {item.icon}

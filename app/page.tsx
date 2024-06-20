@@ -1,7 +1,7 @@
 "use client";
-import Hero from "@/components/home/hero/hero";
-import { Skills } from "@/components/home/skills/skills";
-import HomeProjects from "@/components/home/projects/projects";
+import Hero from "@/components/home/hero/Hero";
+import { Skills } from "@/components/home/skills/Skills";
+import HomeProjects from "@/components/home/projects/Projects";
 import AboutMe from "@/components/home/about-me/AboutMe";
 import Contact from "@/components/home/contact/Contact";
 import React from "react";
