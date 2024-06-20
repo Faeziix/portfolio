@@ -2,6 +2,8 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Galaxy from "@/public/galaxy-min.jpg";
 import Image from "next/image";
 import styles from "./hero.module.scss";
+import Button from "@/components/ui/Button";
+import Link from "next/link";
 
 const icons = [
   {
@@ -28,8 +30,8 @@ function Hero() {
           className="bg object-fit absolute left-0 top-0 h-[96vh] w-full select-none"
         />
       </div>
-      <div className="flex h-full w-full max-w-7xl flex-col items-center justify-center text-left md:items-start">
-        <h1 className="relative -left-1 -mb-md text-center text-7xl font-bold md:text-left">
+      <div className="flex xs:px-10 h-full w-full max-w-7xl flex-col items-center justify-center text-left md:items-start">
+        <h1 className="relative md:-left-1 -mb-md text-center font-bold md:text-left">
           <span className={`${styles.neon} ${styles.primary_gradient}`}>
             FAEZ{" "}
           </span>
@@ -39,10 +41,15 @@ function Hero() {
         </h1>
         <h2
           id="title"
-          className="relative mt-5 text-left text-2xl font-bold text-cyan-100 text-opacity-70"
+          className="relative mt-5 text-left md:text-2xl text-lg font-bold text-cyan-100 text-opacity-70"
         >
           FullStack Developer
         </h2>
+        <Link href="#contact">
+          <Button className="bg-cyan-800/50 border-2 border-cyan-500/50 text-white backdrop-blur-md">
+            GET IN TOUCH
+          </Button>
+        </Link>
       </div>
     </div>
   );

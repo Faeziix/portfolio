@@ -30,15 +30,13 @@ function AboutMe() {
               efficiency, feel free to <Link href="#contact">contact me</Link>.
             </p>
           </section>
-          <div className="flex justify-center">
-            <div className="h-96 w-96 rounded-full border-2 border-cyan-300">
-              <Image
-                src={ProfessionalPortrait}
-                alt="Professional Portrait"
-                className="w-full rounded-full"
-                placeholder="blur"
-              />
-            </div>
+          <div className="flex relative w-full max-w-sm h-full justify-center">
+            <Image
+              src={ProfessionalPortrait}
+              alt="Professional Portrait"
+              className="w-full rounded-full"
+              placeholder="blur"
+            />
           </div>
         </div>
       </div>

@@ -28,9 +28,9 @@ function ProjectSection({ project, direction }: ProjectSectionProps) {
   const { name, imgSrc, link, description, pageLink, deliverables, readMore } =
     project;
   return (
-    <div key={name} className="p-2">
+    <div key={name} >
       <div
-        className={`grid h-full grid-cols-1 gap-md rounded-lg p-4 md:grid-cols-2 md:gap-lg`}
+        className={`grid h-full grid-cols-1 gap-md rounded-lg md:grid-cols-2 md:gap-lg`}
       >
         <div
           className={`${
@@ -45,8 +45,8 @@ function ProjectSection({ project, direction }: ProjectSectionProps) {
           </Link>
           <div className="">
             <p className="text-left leading-8 text-lg text-stone-300">{description}</p>
-            <h3 className="mb-xs text-left text-base">My deliverables:</h3>
-            <ul className="list-style-star space-y-2 list-inside list-disc">
+            <h3 className="mb-sm text-left text-base">My deliverables:</h3>
+            <ul className="list-style-star space-y-sm list-inside list-disc">
               {deliverables.map((feature) => (
                 <li key={feature}>{feature}</li>
               ))}

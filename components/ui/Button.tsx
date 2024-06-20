@@ -1,14 +1,19 @@
 import cn from "@/utils/cn";
 import React from "react";
 
-function Button({ ...props }) {
+type ButtonProps = React.DetailedHTMLProps<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>;
+
+function Button({ ...props }: ButtonProps) {
   return (
     <button
+      {...props}
       className={cn(
-        "rounded-sm bg-white text-black hover:shadow-[0_0_30px] shadow-cyan-900 hover:shadow-cyan-800 px-9 py-2 transition-all duration-300 ease-in-out hover:bg-cyan-500 hover:text-white",
+        "rounded-sm bg-white px-9 py-2 text-black shadow-cyan-900 transition-all duration-300 ease-in-out hover:bg-cyan-500 hover:text-white hover:shadow-[0_0_30px] hover:shadow-cyan-800",
         props.className,
       )}
-      {...props}
     >
       {props.children}
     </button>

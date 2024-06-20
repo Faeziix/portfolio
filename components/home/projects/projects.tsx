@@ -53,10 +53,10 @@ const projects = [
 function HomeProjects() {
   return (
     <div className="mx-auto max-w-7xl">
-      <h2 id="projects" className="mb-20 scroll-mt-24 text-center">
+      <h2 id="projects" className="mb-xl scroll-mt-24 text-center">
         Projects
       </h2>
-      <div className="flex w-full flex-col justify-center gap-8">
+      <div className="flex w-full flex-col justify-center gap-xl">
         {projects.map((project, i) => (
           <ProjectSection
             key={project.name}
