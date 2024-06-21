@@ -44,10 +44,6 @@ const frameworks = [
     icon: <SiTailwindcss />,
   },
   {
-    name: "Ant Design",
-    icon: <SiAntdesign />,
-  },
-  {
     name: "Framer Motion",
     icon: <SiFramer />,
   },
@@ -56,12 +52,15 @@ const frameworks = [
     icon: <SiDjango />,
   },
   {
-    name: "Strapi",
-    icon: <SiStrapi />,
-  },
-  {
     name: "Stripe",
     icon: <SiStripe />,
+  },
+  {
+    name: "Zustand",
+  },
+  {
+    name: "Strapi",
+    icon: <SiStrapi />,
   },
   {
     name: "Express",
@@ -69,6 +68,10 @@ const frameworks = [
   },
   {
     name: "Django Rest Framework",
+  },
+  {
+    name: "Ant Design",
+    icon: <SiAntdesign />,
   },
 ];
 
@@ -147,16 +150,19 @@ export const Skills = (props: {}) => {
         </h2>
         <div className="z-20 mx-auto mt-24 flex max-w-7xl flex-col flex-wrap items-stretch justify-evenly gap-xl text-center lg:flex-nowrap">
           {skillsList.map((skill, index) => (
-            <div className="flex md:flex-row flex-col items-center md:items-start w-full md:gap-xl gap-md justify-between" key={index}>
-              <h3 className="md:w-40 text-xl text-left">{skill.category}</h3>
-              <div className="md:grid flex flex-wrap justify-center lg:grid-cols-6 md:grid-cols-4 gap-sm">
+            <div
+              className="flex w-full flex-col items-center justify-between gap-md md:flex-row md:items-start md:gap-xl"
+              key={index}
+            >
+              <h3 className="text-left text-xl md:w-40">{skill.category}</h3>
+              <div className="flex flex-wrap justify-center gap-sm md:grid md:grid-cols-4 lg:grid-cols-6">
                 {skill.items.map((item, index) => (
                   <div
-                    className="flex aspect-square sm:w-28 w-24 flex-col items-center justify-center gap-1 rounded-lg border-2 border-solid border-cyan-200 bg-slate-950 p-3 text-5xl"
+                    className="flex aspect-square w-24 flex-col items-center justify-center gap-1 rounded-lg border-2 border-solid border-cyan-200 bg-slate-950 p-3 text-5xl sm:w-28"
                     key={index}
                   >
                     {item.icon}
-                    <p className="mt-1 mb-0 text-xs font-medium">{item.name}</p>
+                    <p className="mb-0 mt-1 text-xs font-medium">{item.name}</p>
                   </div>
                 ))}
               </div>
