@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.scss";
 import Header from "@/components/layout/Header";
 import { jetbrainsMono } from "./fonts";
-import SmoothScrolling from "@/utils/SmoothScrolling";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/layout/Footer";
 
@@ -20,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${jetbrainsMono.className} `}>
         <Header />
-        <SmoothScrolling>{children}</SmoothScrolling>
+        {children}
         <SpeedInsights />
         <Footer />
       </body>

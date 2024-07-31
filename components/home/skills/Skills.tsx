@@ -56,15 +56,8 @@ const frameworks = [
     icon: <SiStripe />,
   },
   {
-    name: "Zustand",
-  },
-  {
     name: "Strapi",
     icon: <SiStrapi />,
-  },
-  {
-    name: "Express",
-    icon: <SiExpress />,
   },
   {
     name: "Django Rest Framework",

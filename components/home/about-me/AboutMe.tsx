@@ -1,4 +1,4 @@
-import ProfessionalPortrait from "@/public/professional-portrait.jpg";
+import ProfessionalPortrait from "@/public/professional_portrait.PNG";
 import styles from "./aboutMe.module.scss";
 import Image from "next/image";
 import Link from "next/link";
@@ -34,8 +34,7 @@ function AboutMe() {
             <Image
               src={ProfessionalPortrait}
               alt="Professional Portrait"
-              className="w-full rounded-full"
-              placeholder="blur"
+              className="w-full rounded-full outline-cyan-500 outline"
             />
           </div>
         </div>
