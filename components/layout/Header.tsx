@@ -68,7 +68,7 @@ function Header() {
             </div>
 
             <div className="flex h-full grow items-center justify-end">
-              <div className="flex h-full w-full flex-col items-center justify-center gap-14 text-5xl text-cyan-300 text-opacity-70">
+              <div className="flex h-full w-full flex-col items-center justify-center lg:gap-14 gap-4 text-3xl text-opacity-70">
                 {links.map((link, index) => (
                   <Link
                     onClick={() => setHamActive(false)}
