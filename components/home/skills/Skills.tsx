@@ -138,10 +138,10 @@ export const Skills = (props: {}) => {
   return (
     <div className="relative mx-auto mb-xl">
       <div className="z-30">
-        <h2 id="skills" className="scroll-mt-24 pt-10 text-center">
+        <h2 id="skills" className="scroll-mt-xl text-center">
           Skills
         </h2>
-        <div className="z-20 mx-auto mt-24 flex max-w-7xl flex-col flex-wrap items-stretch justify-evenly gap-xl text-center lg:flex-nowrap">
+        <div className="z-20 mx-auto lg:mt-xl mt-lg flex max-w-7xl flex-col flex-wrap items-stretch justify-evenly gap-xl text-center lg:flex-nowrap">
           {skillsList.map((skill, index) => (
             <div
               className="flex w-full flex-col items-center justify-between gap-md md:flex-row md:items-start md:gap-xl"
@@ -154,8 +154,10 @@ export const Skills = (props: {}) => {
                     className="flex aspect-square w-24 flex-col items-center justify-center gap-1 rounded-lg border-2 border-solid border-cyan-200 bg-slate-950 p-3 text-5xl sm:w-28"
                     key={index}
                   >
-                    {item.icon}
-                    <p className="mb-0 mt-1 text-xs font-medium">{item.name}</p>
+                        <span className="text-5xl text-stone-200">
+                          {item.icon}
+                        </span>
+                    <p className="mb-0 mt-1 text-xs font-medium text-stone-200">{item.name}</p>
                   </div>
                 ))}
               </div>

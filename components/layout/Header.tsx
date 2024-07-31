@@ -33,9 +33,11 @@ function Header() {
   return (
     <div className={`nav fixed z-30 flex w-full justify-center`}>
       <div
-        className={`${transparentBg ? "bg-transparent" : "bg-white/10"} flex w-full items-center justify-end backdrop-blur-lg transition-colors md:hidden md:justify-center`}
+        className={`${transparentBg ? "bg-transparent" : "md:bg-white/10"} flex w-full items-center justify-end md:backdrop-blur-md transition-colors md:hidden md:justify-center`}
       >
-        <HamburgerIcon active={hamActive} setActive={setHamActive} />
+        <div className={ `backdrop-blur-md rounded-lg m-2 ${transparentBg ? "bg-transparent" : "bg-white/10"}` }>
+          <HamburgerIcon active={hamActive} setActive={setHamActive} />
+        </div>
       </div>
       <div
         className={`${elnath.className} ${transparentBg ? "bg-transparent" : "bg-white/10"} my-4 hidden gap-4 rounded-full p-6 text-lg shadow-lg backdrop-blur-xl transition-colors md:flex`}

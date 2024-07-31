@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="relative">
       <Hero />
-      <div className="space-y-2xl mx-10 pb-2xl">
+      <div className="lg:space-y-2xl space-y-xl xs:mx-10 mx-6 pb-2xl">
         <AboutMe />
         <Skills />
         <HomeProjects />

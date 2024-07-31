@@ -53,7 +53,7 @@ const projects = [
 function HomeProjects() {
   return (
     <div className="mx-auto max-w-7xl">
-      <h2 id="projects" className="mb-xl scroll-mt-24 text-center">
+      <h2 id="projects" className="lg:mb-xl mb-lg scroll-mt-24 text-center">
         Projects
       </h2>
       <div className="flex w-full flex-col justify-center gap-xl">

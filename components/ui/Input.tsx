@@ -40,7 +40,7 @@ export const TextArea = ({ label, ...props }: TextAreaProps) => {
         </label>
         <textarea
           {...props}
-          className={cn("peer w-full max-w-full block resize-x border-b border-gray-300 bg-inherit py-1 transition-colors focus:border-b-2 focus:border-blue-700 focus:outline-none", props.className)}
+          className={cn("peer w-full max-w-full block resize-x border-b border-gray-300 bg-inherit py-1 transition-colors focus:border-blue-700 focus:outline-none", props.className)}
           placeholder=" "
         />
       </div>
