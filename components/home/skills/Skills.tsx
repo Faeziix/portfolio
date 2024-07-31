@@ -141,26 +141,26 @@ export const Skills = (props: {}) => {
         <h2 id="skills" className="scroll-mt-xl text-center">
           Skills
         </h2>
-        <div className="z-20 mx-auto lg:mt-xl mt-lg flex max-w-7xl flex-col flex-wrap items-stretch justify-evenly gap-xl text-center lg:flex-nowrap">
+        <div className="z-20 mx-auto mt-lg flex max-w-7xl flex-col flex-wrap items-stretch justify-evenly gap-xl text-center lg:mt-xl lg:flex-nowrap">
           {skillsList.map((skill, index) => (
             <div
               className="flex w-full flex-col items-center justify-between gap-md md:flex-row md:items-start md:gap-xl"
               key={index}
             >
               <h3 className="text-left text-xl md:w-40">{skill.category}</h3>
-              <div className="flex flex-wrap justify-center gap-sm md:grid md:grid-cols-4 lg:grid-cols-6">
+              <ul className="flex flex-wrap justify-center gap-sm md:grid md:grid-cols-4 lg:grid-cols-6">
                 {skill.items.map((item, index) => (
-                  <div
+                  <li
                     className="flex aspect-square w-24 flex-col items-center justify-center gap-1 rounded-lg border-2 border-solid border-cyan-200 bg-slate-950 p-3 text-5xl sm:w-28"
                     key={index}
                   >
-                        <span className="text-5xl text-stone-200">
-                          {item.icon}
-                        </span>
-                    <p className="mb-0 mt-1 text-xs font-medium text-stone-200">{item.name}</p>
-                  </div>
+                    <span className="text-5xl text-stone-200">{item.icon}</span>
+                    <p className="mb-0 mt-1 text-xs font-medium text-stone-200">
+                      {item.name}
+                    </p>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>
