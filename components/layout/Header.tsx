@@ -56,7 +56,7 @@ function Header() {
           <motion.div
             className={`absolute right-0 top-0 h-screen w-screen bg-black bg-opacity-90 backdrop-blur-sm transition-all duration-1000`}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, display: "block" }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{
               duration: 0.1,
