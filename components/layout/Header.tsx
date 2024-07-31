@@ -54,12 +54,12 @@ function Header() {
       <AnimatePresence>
         {hamActive && (
           <motion.div
-            className={`absolute right-0 top-0 h-screen w-screen bg-black bg-opacity-90 backdrop-blur-sm transition-all duration-1000`}
+            className={`fixed left-0 top-0 h-screen w-screen bg-black bg-opacity-90 backdrop-blur-sm`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{
-              duration: 0.1,
+              duration: 0.3,
               easings: "easeOut",
             }}
           >
@@ -70,7 +70,12 @@ function Header() {
             <div className="flex h-full grow items-center justify-end">
               <div className="flex h-full w-full flex-col items-center justify-center gap-14 text-5xl text-cyan-300 text-opacity-70">
                 {links.map((link, index) => (
-                  <Link key={index} className="text-inherit no-underline" href={link.url}>
+                  <Link
+                    onClick={() => setHamActive(false)}
+                    key={index}
+                    className="text-inherit no-underline"
+                    href={link.url}
+                  >
                     <motion.p
                       className={elnath.className}
                       initial={{ opacity: 0, y: 20 }}
