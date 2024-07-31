@@ -396,11 +396,7 @@ export function GlobeDemo() {
 
   return (
     <div className="xs:flex hidden max-w-2xl flex-row h-1/2 lg:h-2/3 items-center relative w-full">
-      <div className="mx-auto w-full relative overflow-hidden h-full">
-        <div className="absolute w-full h-full z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} />;
-        </div>
-      </div>
+      <World data={sampleArcs} globeConfig={globeConfig} />
     </div>
   );
 }
